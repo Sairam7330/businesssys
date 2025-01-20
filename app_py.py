@@ -4,9 +4,9 @@ import numpy as np
 import joblib
 
 # Load the common model
-model = joblib.load("common_model.pkl")
+model = joblib.load("improved_gbr_model.pkl")
 
-st.title("AI Application with Common Model")
+st.title("Business application")
 
 # Input Section
 st.header("Enter Feature Values")
