@@ -5,5 +5,5 @@ matplotlib
 shap
 plotly
 pandas-profiling
-h2o
 web3
+auto-sklearn
