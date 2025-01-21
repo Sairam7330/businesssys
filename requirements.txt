@@ -1,6 +1,9 @@
 streamlit
-scikit-learn
-numpy
 pandas
-joblib
+scikit-learn
 matplotlib
+shap
+plotly
+pandas-profiling
+h2o
+web3
