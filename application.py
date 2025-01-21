@@ -12,9 +12,6 @@ from h2o.automl import H2OAutoML
 import hashlib
 from web3 import Web3
 
-# Initialize H2O
-h2o.init()
-
 # Streamlit App Title
 st.title("AI-Powered Explainable Business System with Blockchain Integration")
 
@@ -48,18 +45,20 @@ if uploaded_file is not None:
         X_val = scaler.transform(X_val)
         X_test = scaler.transform(X_test)
 
-        # AutoML
-        if st.button("Run AutoML"):
-            h2o_train = h2o.H2OFrame(pd.concat([pd.DataFrame(X_train), pd.DataFrame(y_train)], axis=1))
-            h2o_test = h2o.H2OFrame(pd.concat([pd.DataFrame(X_test), pd.DataFrame(y_test)], axis=1))
-            h2o_train.columns[-1] = "target"
-            h2o_test.columns[-1] = "target"
+  # Install Auto-sklearn
+!pip install auto-sklearn
 
-            aml = H2OAutoML(max_runtime_secs=300, seed=42)
-            aml.train(y="target", training_frame=h2o_train)
-            best_model = aml.leader
-            st.write("AutoML Best Model:")
-            st.write(best_model)
+import autosklearn.classification
+from sklearn.metrics import accuracy_score
+
+# Replace H2O AutoML with Auto-sklearn
+automl = autosklearn.classification.AutoSklearnClassifier(time_left_for_this_task=300, per_run_time_limit=30)
+automl.fit(X_train, y_train)
+
+# Predictions and Evaluation
+y_pred = automl.predict(X_val)
+st.write("AutoML Best Model Accuracy:", accuracy_score(y_val, y_pred))
+
 
         # Random Forest Model
         rf = RandomForestClassifier(random_state=42)
