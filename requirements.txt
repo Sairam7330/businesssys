@@ -1,9 +1,11 @@
+pip>=24.3.1
+numpy
 streamlit
 pandas
 scikit-learn
 matplotlib
 shap
 plotly
-pandas-profiling
+ydata-profiling
 web3
 auto-sklearn
