@@ -1,66 +1,8 @@
-# Specify a compatible pip version
-pip>=24.3.1
-
-# General dependencies
-numpy==2.2.2
-pandas==2.2.3
-scikit-learn==1.6.1
-matplotlib==3.10.0
-shap==0.46.0
-plotly==5.24.1
-
-# Profiling and visualization
-ydata-profiling==4.12.2
-seaborn==0.13.2
-wordcloud==1.9.4
-
-# Web3 and blockchain-related libraries
-web3==7.7.0
-
-# Machine learning automation
-auto-sklearn==0.15.0
-
-# Streamlit for web application
-streamlit==1.41.1
-
-# Additional required dependencies
-joblib>=1.2.0
-threadpoolctl>=3.1.0
-python-dateutil>=2.8.2
-pytz>=2020.1
-tzdata>=2022.7
-scipy>=1.6.0
-PyYAML<6.1,>=5.0.0
-jinja2<3.2,>=2.11.1
-statsmodels<1,>=0.13.2
-phik<0.13,>=0.11.1
-htmlmin==0.1.12
-visons==0.7.6
-numba==0.61.0
-tqdm>=4.27.0
-slicer==0.0.8
-cloudpickle==3.1.1
-pydeck<1,>=0.8.0b4
-rich<14,>=10.14.0
-protobuf<6,>=3.20
-altair<6,>=4.0
-cachetools<6,>=4.0
-click<9,>=7.0
-packaging<25,>=20
-pillow<12,>=7.1.0
-pyarrow>=7.0
-requests<3,>=2.27
-tenacity<10,>=8.1.0
-toml<2,>=0.10.1
-typing-extensions<5,>=4.3.0
-watchdog<7,>=2.1.5
-gitpython!=3.1.19,<4,>=3.0.7
-tornado<7,>=6.0.3
-pydantic>=2
-typeguard<5,>=3
-multimethod<2,>=1.4
-imagehash==4.3.1
-cyclery>=0.10
-fonttools>=4.22.0
-pyparsing>=2.3.1
-contourpy>=1.0.1
+streamlit
+pandas
+numpy
+scikit-learn
+shap
+matplotlib
+joblib
+gdown
